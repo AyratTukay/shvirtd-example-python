@@ -7,9 +7,9 @@ RUN apt-get update && \
 RUN python -m venv /app/venv
 ENV PATH="/app/venv/bin:$PATH"
 
-COPY requirements.txt .
+COPY requirements.txt ./
 #авторизация для скачивания зависимостей из закрытых репозиториев
-ARG ARG_PASSWORD=P@55w0rD
+ARG ARG_PASSWORD=YtReWq4321
 # Монтирование кеша pip с docker host
 RUN --mount=type=cache,target=~/.cache/pip pip install -r requirements.txt
 
